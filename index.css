@@ -1,0 +1,106 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* main css */
+.wrapper {
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 1170px;
+  background-color: hsla(204, 33%, 97%, 1);
+  flex-shrink: 0;
+}
+
+div.navbar {
+  position: fixed;
+  margin: 28px 40px;
+  width: 92%;
+  height: 73px;
+}
+
+img {
+  position: fixed;
+  width: 200px;
+  height: 39px;
+  background: 0px 0px / 100% 100% no-repeat;
+}
+
+ul#navigation {
+  display: flex;
+  position: fixed;
+  list-style-type: none;
+  float: right;
+  width: 35%;
+  height: 40px;
+  margin-inline-start: 57%;
+  
+}
+
+ul#navigation li{
+  float: right;
+  margin-bottom: 31px;
+  
+}
+
+ul#navigation li:not(:last-of-type) {
+  padding-right: 38px;
+}
+
+ul#navigation a {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  height: 17px;
+ 
+}
+
+li#account {
+  display: flex;
+  width: 15%;
+  height: 40px;
+  border: 2px solid hsla(213, 10%, 44%, 1);
+  border-radius: 6px;
+  margin-right: 0;
+}
+
+p#hr {
+  
+  padding-top: 71px;
+  width: 98%;
+  height: 2px;
+  border: 2px solid hsla(204, 18%, 90%, 1);
+  
+}
