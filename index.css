@@ -92,7 +92,7 @@ nav.navbar {
   height: 53px;
 }
 
-img:not(img#pp) {
+img:not(img#pp, img#pbys, #qmark) {
   position: fixed;
   width: 200px;
   height: 39px;
@@ -153,6 +153,9 @@ p#hr {
 
 section {
   width: 65%;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 aside {
@@ -163,15 +166,18 @@ aside {
 }
 
 /* general styling of the texts in the aside */
-aside p, span#sign, span#fin, li, a#agency, blockquote {
-  color: hsla(0, 0%, 100%, 1);
+aside p, span#sign, span#fin, li, a#agency, blockquote, section p {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.01px;
 }
 
-aside p:not(.rv), aside a, hr, blockquote{
+aside p, span#sign, span#fin, li, a#agency, blockquote {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+aside p:not(.rv), aside a, aside hr, blockquote{
   padding-left: 35px;
   font-weight: 700;
 }
@@ -232,7 +238,7 @@ ul.side li {
   letter-spacing: -0.008px;
 }
 
-aside p:nth-of-type(4), hr {
+aside p:nth-of-type(4), aside hr {
   font-size: 12px;
   font-weight: 700;
   margin-top: 12px;
@@ -245,7 +251,7 @@ a#agency {
   font-weight: 700;
 }
 
-hr {
+aside hr {
   width: 65%;
   opacity: 0.2005;
   margin-left: 35px;
@@ -285,4 +291,147 @@ div p.rv {
   padding-left: 10px;
   font-weight: 700;
   letter-spacing: -0.008px;
+}
+
+section div hr {
+  width: 100%;
+  height: 1px;
+  opacity: 0.09;
+  color: hsla(216, 33%, 97%, 1);
+}
+
+section p {
+  padding-top: 4%;
+  margin-left: 30px;
+  padding-bottom: 14px;
+  color: hsla(211, 35%, 17%, 1);
+  font-weight: 400;
+  letter-spacing: -0.16px;
+}
+
+section p:first-child {
+  font-size: 22px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section div.basic {
+  height: 163px;
+}
+
+section div.payment {
+  height: 103px;
+}
+
+div.nums {
+  display: flex;
+  height: 35px;
+}
+
+div span.circlednum {
+  display: inline-block;
+  font-size: 25px;
+  color: hsla(211, 49%, 55%, 1);
+  padding-top: 4.5px;
+  margin-left: 30px;
+}
+
+section div p:first-of-type {
+  margin-left: 8px;
+  padding-top: 11px;
+  font-size: 15px;
+}
+
+.fields{
+  display: flex;
+  flex-direction: row;
+}
+
+.fmfld {
+  width: 10.5rem;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 30px;
+
+}
+
+label {
+  width: 155px;
+  height: 25px;
+  color: hsla(211, 35%, 17%, 1);
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input {
+  width: 170px;
+  height: 1.8rem;
+  border: 0px solid;
+  border-radius: 4px;
+  background: hsla(216, 16%, 94%, 1);
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+input#email {
+  width: 300px;
+  height: 1.8rem;
+}
+
+input#cc, input#reg {
+  width: 370px;
+  height: 1.8rem;
+}
+
+input#reg {
+  margin-top: 18px;
+  background-color: hsla(173, 96%, 28%, 1);
+  height: 2.3rem;
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: 700;
+  letter-spacing: -0.396px;
+}
+
+p#foot {
+  font-size: 14px;
+}
+
+img#pbys {
+  width: 72px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 180px;
+}
+
+div img#qmark {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-top: 18px;
+}
+
+div.mask {
+  display: flex;
+  width: 260px;
+  height: 42px;
+  flex-direction: row;
+  margin-left: 80px;
+  margin-top: 1.5px 
+}
+
+p#foot1 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01px;
+  color: hsla(211, 35%, 17%, 1);
+}
+
+span#foot2 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.01px;
+  color: hsla(213, 10%, 44%, 1);
 }
