@@ -34,12 +34,13 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* main css */
 .wrapper {
-  position: relative;
+  /* position: relative; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  height: 1176px;
+  height: 100vh;
   background-color: hsla(204, 33%, 97%, 1);
   
 }
@@ -49,19 +50,49 @@ header {
   flex-direction: column-reverse;
   justify-content: space-between;
   width: 95%;
-  height: 71px;
-  margin: 28px 40px;
+  height: 51px;
+  margin: 18px 40px 45px;
+}
+
+.panel {
+  display: flex;
+  width: 51%;
+  height: 70%;
+  background: hsla(0, 0%, 100%, 1);
+  border: 0px solid;
+  border-radius: 6px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+
+}
+
+footer {
+  width: 41%;
+  height: 17px;
+  margin: 0 auto;
+  margin-block-start: 25px;
+  text-align: center;
+  color: hsla(200, 6%, 41%, 1);
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+span {
+  color: hsla(200, 49%, 38%, 1);
 }
 
 nav.navbar {
-  position: flex;
+  display: flex;
   justify-content: space-between;
   position: fixed;
   width: 92%;
-  height: 73px;
+  height: 53px;
 }
 
-img {
+img:not(img#pp) {
   position: fixed;
   width: 200px;
   height: 39px;
@@ -80,43 +111,178 @@ ul#navigation {
   
 }
 
-ul#navigation li{
+ul#navigation li:not(:last-child) {
   float: right;
-  margin-bottom: 31px;
+  margin-bottom: 25px;
+  margin-top: 10px;
   
 }
 
-/* ul#navigation li:not(:last-of-type) {
-  padding-right: 38px;
-} */
-
-ul#navigation a {
-  text-align: center;
+a:not(#agency) {
   text-decoration: none;
   display: block;
   font-size: 14px;
   height: 17px;
- 
+  color: hsla(211, 35%, 17%, 1);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01px;
 }
 
-li#account {
+#account {
   display: flex;
-  width: 15%;
-  height: 40px;
+  width: 70px;
+  height: 100%;
   border: 2px solid hsla(213, 10%, 44%, 1);
   border-radius: 6px;
 }
 
+button li a{
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
 p#hr {
-  /* padding-top: 71px; */
-  width: 98%;
+  width: 97%;
   height: 2px;
   border: 2px solid hsla(204, 18%, 90%, 1);
+}
+
+section {
+  width: 65%;
+}
+
+aside {
+  width: 35%;
+  background: hsla(204, 84%, 41%, 1);
+  border: 0px solid;
+  border-radius: 0px 6px 6px 0px;
+}
+
+/* general styling of the texts in the aside */
+aside p, span#sign, span#fin, li, a#agency, blockquote {
+  color: hsla(0, 0%, 100%, 1);
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.01px;
+}
+
+aside p:not(.rv), aside a, hr, blockquote{
+  padding-left: 35px;
+  font-weight: 700;
+}
+
+aside p:first-child {
+  padding-top: 9%;
+  font-size: 12px;
+}
+
+p span#sign {
+  display: inline-block;
+  font-size: 21px;
+  margin-top: 5px;
+  padding-right: 3px;
+}
+
+aside p:nth-child(2) {
+  display: flex;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.015px;
+}
+
+p span#fin {
+  display: inline-block;
+  display: flex;
+  font-size: 15px;
+  align-items: flex-end;
+  letter-spacing: -0.015px;
+  padding-bottom: 8px;
+  font-weight: 300;
+}
+
+aside p:nth-child(3) {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 15px; /* 150% */
+  letter-spacing: -0.008px;
+}
+
+.side>li::marker {
+  content: url(./assets/Combined-Shape.png);
+  fill: hsla(189, 100%, 86%, 1);
+  font-size: 2px;
+}
+
+ul.side li:first-child {
+  padding-top: 5%;
+}
+
+ul.side li {
+  padding-left: 11px;
+  margin-left: 9px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px; /* 150% */
+  letter-spacing: -0.008px;
+}
+
+aside p:nth-of-type(4), hr {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+a#agency {
+  font-size: 12px;
+  letter-spacing: -0.008px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+hr {
+  width: 65%;
+  opacity: 0.2005;
+  margin-left: 35px;
+}
+
+blockquote {
+  font-size: 12px;
+  margin-top: 10px;
+  letter-spacing: -0.009px;
+  padding-right: 10px;
+  line-height: 20px;
+}
+
+div#review {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 200px;
+  height: 53px;
   
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+img#pp {
+  width: 40px;
+  height: 40px;
+  margin-left: 35px;
+  margin-top: 10px;
+  border: 0px solid;
+  border-radius: 20px;
+}
+
+
+div p.rv {
+  font-size: 14px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-weight: 700;
+  letter-spacing: -0.008px;
 }
