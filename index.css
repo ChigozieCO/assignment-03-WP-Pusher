@@ -414,10 +414,10 @@ div img#qmark {
 
 div.mask {
   display: flex;
-  width: 260px;
+  width: 80%;
   height: 42px;
   flex-direction: row;
-  margin-left: 80px;
+  margin-left: 15%;
   margin-top: 1.5px 
 }
 
