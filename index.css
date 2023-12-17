@@ -34,13 +34,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* main css */
 .wrapper {
-  /* position: relative; */
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   background-color: hsla(204, 33%, 97%, 1);
   
 }
@@ -347,16 +345,16 @@ section div p:first-of-type {
 }
 
 .fmfld {
-  width: 10.5rem;
+  width: 100%;
   height: 53px;
   display: flex;
   flex-direction: column;
   margin-inline-start: 30px;
-
+  margin-inline-end: 1.7em;
 }
 
 label {
-  width: 155px;
+  width: 100%;
   height: 25px;
   color: hsla(211, 35%, 17%, 1);
   font-family: Lato;
@@ -367,22 +365,23 @@ label {
 }
 
 input {
-  width: 170px;
+  width: 100%;
   height: 1.8rem;
   border: 0px solid;
   border-radius: 4px;
   background: hsla(216, 16%, 94%, 1);
   padding: 10px 20px;
   font-size: 14px;
+  /* margin-right: 18%; */
 }
 
 input#email {
-  width: 300px;
+  width: 90%;
   height: 1.8rem;
 }
 
 input#cc, input#reg {
-  width: 370px;
+  width: 100%;
   height: 1.8rem;
 }
 
