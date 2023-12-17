@@ -14,4 +14,4 @@ With the HTML and CSS code in this repo I was able to recreate the project as sh
 
 ![My-Wp Pusher](https://github.com/ChigozieCO/assignment-03-WP-Pusher/assets/107365067/70fa9b35-eb36-4ace-9095-796fc2060685)
 
-This project is hosted [here]()
+This project is hosted [here](https://monumental-pony-5932ef.netlify.app/)
