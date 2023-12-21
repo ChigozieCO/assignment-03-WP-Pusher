@@ -45,11 +45,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 header {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  width: 95%;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 70%;
   height: 51px;
-  margin: 18px 40px 45px;
+  margin: 2% auto 4%;
+}
+
+#mobilenav {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .panel {
@@ -85,13 +93,14 @@ span {
 nav.navbar {
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 92%;
+  /* position: fixed; */
+  width: 100%;
   height: 53px;
+  align-items: center;
 }
 
 img:not(img#pp, img#pbys, #qmark) {
-  position: fixed;
+  /* position: fixed; */
   width: 200px;
   height: 39px;
   background: 0px 0px / 100% 100% no-repeat;
@@ -99,13 +108,14 @@ img:not(img#pp, img#pbys, #qmark) {
 
 ul#navigation {
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   list-style-type: none;
   justify-content: space-between;
   float: right;
-  width: 35%;
+  width: 45%;
   height: 40px;
-  margin-inline-start: 57%;
+  /* margin-inline-start: 14%; */
+  padding-inline-start: 0px;
   
 }
 
@@ -116,7 +126,7 @@ ul#navigation li:not(:last-child) {
   
 }
 
-a:not(#agency) {
+a:not(#agency), #mobilenav li:last-child {
   text-decoration: none;
   display: block;
   font-size: 14px;
@@ -130,7 +140,7 @@ a:not(#agency) {
   letter-spacing: -0.01px;
 }
 
-#account {
+#account, #mobileaccount {
   display: flex;
   width: 70px;
   height: 100%;
@@ -144,13 +154,14 @@ button li a{
 }
 
 p#hr {
-  width: 97%;
+  width: 100%;
   height: 2px;
   border: 2px solid hsla(204, 18%, 90%, 1);
+  margin: 2% auto 4%;
 }
 
 section {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   
@@ -364,7 +375,7 @@ label {
   line-height: normal;
 }
 
-input {
+input:not(#menu) {
   width: 100%;
   height: 1.8rem;
   border: 0px solid;
@@ -383,6 +394,20 @@ input#email {
 input#cc, input#reg {
   width: 100%;
   height: 1.8rem;
+}
+
+div.cc-fmfld {
+  display: flex;
+}
+
+div.cc-fmfld input:nth-of-type(1) {
+  flex: 3;
+}
+div.cc-fmfld input:nth-of-type(2) {
+  flex: 1;
+}
+div.cc-fmfld input:nth-of-type(3) {
+  flex: 0.5;
 }
 
 input#reg {
@@ -433,4 +458,120 @@ span#foot2 {
   font-weight: 400;
   letter-spacing: -0.01px;
   color: hsla(213, 10%, 44%, 1);
+}
+
+@media (max-width: 999px) {
+  aside {
+    width: 45%
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    margin: 1.5% 10% 3%;
+    width: 83%;
+    height: max-content;
+  }
+
+  img:not(img#pp, img#pbys, #qmark) {
+    width: 130px
+  }
+
+  nav.navbar{
+    z-index: 9999;  
+  }
+
+  ul#navigation {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  ul#mobilenav {
+    display: block;
+  }
+
+  .mobile-menu label {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    display: block;
+    cursor: pointer;
+    background: url(./assets/menu-bar.png) no-repeat right center;
+    background-size: 40px;
+    padding: 0px 50px 0px 0px;
+    height: 39px;
+    position: relative;
+    color: hsla(212, 100%, 19%, 1);
+    letter-spacing: -0.01px;
+  }
+
+  .menu-content {
+    font-family: 'Lato', sans-serif; 
+    padding: 0 0 0 0px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0 0 50px;
+    position: absolute;
+    left: 10px;
+    width: 95%;
+    background-color: hsla(204, 33%, 97%, 0.9);
+  }
+
+  #mobilenav li:first-child {
+    margin-block-start: 30px;
+  }
+
+  .mobile-menu {
+    background-color: hsla(204, 33%, 97%, 1);
+    padding: 0px 0px;
+    /* border-bottom: 2px solid hsla(204, 18%, 90%, 1); */
+    /* box-shadow: 1px 2px 3px rgba(0,0,0,0.2); */
+  }
+
+  .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #mobilenav a, #mobilenav li:last-child {
+    display:block;
+    /* padding: 10px; */
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+  }
+
+  #mobileaccount {
+    margin: auto;
+  }
+
+  input#menu {
+    display: none;
+  }
+
+  input:checked +label {
+    background-image: url(./assets/close-button.png);
+    background-size: 45px;
+  }
+
+  input:checked ~ label {
+    background-image: url(./assets/close-button.png);
+    background-size: 45px;
+  }
+
+  input:checked ~ .menu-content {
+    max-height: 100%;
+  }
+
+  .panel {
+    flex-direction: column;
+    width: 85%;
+  }
+
+  aside {
+    width: 100%;
+  }
 }

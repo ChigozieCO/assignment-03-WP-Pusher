@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <title>Wp Pusher</title>
 </head>
@@ -28,6 +28,21 @@
           <li><a href="./help">Help</a></li>
           <button id="account"><li><a href="./account">Account</a></li></button>
         </ul>
+
+        <!-- Collapsible menu for the mobile view -->
+        <div class="mobile-menu">
+          <input type="checkbox" id="menu">
+          <label for="menu">Menu</label>
+          <div class="menu-content">
+            <ul id="mobilenav">
+              <li><a href="./download">Download</a></li>
+              <li><a href="./learn-more">Learn more</a></li>
+              <li><a href="./pricing">Pricing</a></li>
+              <li><a href="./help">Help</a></li>
+              <li><button id="mobileaccount"><a href="./account">Account</a></button></li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <p id="hr"></p>
     </header>
@@ -76,7 +91,11 @@
           <div class="fields">
             <div class="fmfld">
               <label for="cc">Credit Card</label>
-              <input type="text" id="cc" name="creditcard" placeholder="Card Number &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; &ensp;MM/YY &ensp; CVV"/>
+              <div class="cc-fmfld">
+                <input type="text" id="cc" name="creditcard" placeholder="Card Number" />
+                <input type="text" placeholder="MM/YY" required="">
+                <input type="text" placeholder="CVC" required="">
+              </div>
             </div>
           </div>
 
